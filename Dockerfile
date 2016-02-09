@@ -72,6 +72,10 @@ RUN sed -i -e 's#^KIBANA_HOME=$#KIBANA_HOME='$KIBANA_HOME'#' /etc/init.d/kibana 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python get-pip.py
 
+## install Elastic Curator
+
+RUN pip install elasticsearch-curator
+
 
 ###############################################################################
 #                               CONFIGURATION
